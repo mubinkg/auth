@@ -49,11 +49,11 @@ export const StakeRewards = () => {
     return (
         <div style={{ width: "100%", margin: "20px 0", display: "flex", flexDirection: "column" }}>
             {!isTokenBalanceLoading && (
-                <p>Wallet Balance: {parseFloat(toEther(BigInt(tokenBalance!.toString()))).toFixed(4)}</p>
+                <p>Wallet Balance: {parseFloat(toEther(BigInt(tokenBalance?.toString() || 0))).toFixed(4)}</p>
             )}
             <br></br>
             <h2 style={{ marginBottom: "20px"}}>
-                Stake Rewards: {stakedInfo && parseFloat(toEther(BigInt(stakedInfo[1].toString()))).toFixed(2)}
+                Stake Rewards: {stakedInfo && parseFloat(toEther(BigInt(stakedInfo[1]?.toString()))).toFixed(2)}
             </h2>
             <TransactionButton
                 transaction={() => (
@@ -98,7 +98,7 @@ export const StakeRewards = () => {
                 }}
             >
                 <span style={{ fontWeight: "bold", textTransform: "uppercase", color: 'white' }}>REWARDS CONTRACT</span>
-                <span style={{ backgroundColor: "#fff",fontSize: "11px", color: "#000", padding: "5px 10px", borderRadius: "5px" }}>0x8bC85e7deE8a1E70b1a794db14467697d44081B5</span>
+                <span style={{ backgroundColor: "#fff",fontSize: "11px", color: "#000", padding: "5px 10px", borderRadius: "5px", marginLeft: "-30px" }}>0x8bC85e7deE8a1E70b1a794db14467697d44081B5</span>
             </button>
         </div>
     )

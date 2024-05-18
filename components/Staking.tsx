@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import { claimTo, getNFTs, ownerOf, totalSupply } from "thirdweb/extensions/erc721";
 import { NFTCard } from "./NFTCard";
 import { StakedNFTCard } from "./StakedNFTCard";
+import './staking.module.css'
 
 export const Staking = () => {
     const account = useActiveAccount();
@@ -25,7 +26,7 @@ export const Staking = () => {
         const nfts = await getNFTs({
             contract: NFT_CONTRACT,
             start: 0,
-            count: parseInt(totalNFTSupply.toString()),
+            count: parseInt(totalNFTSupply?.toString()),
         });
         
         for (let nft of nfts) {
@@ -63,7 +64,7 @@ export const Staking = () => {
                 alignItems: "center",
                 backgroundColor: "#151515",
                 borderRadius: "8px",
-                width: "500px",
+                maxWidth: "360px",
                 padding: "20px",
             }}>
                 <ConnectButton

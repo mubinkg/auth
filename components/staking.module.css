@@ -1,0 +1,9 @@
+.stacking{
+    display: "flex";
+    flex-direction: column;
+    align-items: center;
+    background-color:  "#151515";
+    border-radius: "8px";
+    max-width: 500px;
+    padding: "20px";
+}
