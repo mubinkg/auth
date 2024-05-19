@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThirdwebProvider } from "@/app/thirdweb";
+import VerticalNav from "../../components/VerticalNav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,7 +33,7 @@ export default function RootLayout({
             fontFamily: "Roboto, sans-serif", // Font family set to Roboto
             fontWeight: "700", // Font weight set to 700 (bold)
             fontSize: "15px", // Font size set to 13px
-          }}>
+          }} className="large-nav">
             <div>
               <a href="#" style={{ fontWeight: "normal", fontSize: "inherit" }}>Home</a>
               <span style={{ margin: "0 10px" }}>|</span>
@@ -43,6 +44,7 @@ export default function RootLayout({
               <a href="#" style={{ fontWeight: "normal", fontSize: "inherit" }}>Back to Wushi Land</a>
             </div>
           </div>
+          <VerticalNav/>
           <div style={{ paddingTop: "60px" }}> {/* Add padding to the top to offset content underneath the fixed header */}
             {children}
           </div>

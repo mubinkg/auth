@@ -108,11 +108,25 @@ a {
   margin-bottom: "20px" !important;
 }
 
+.large-nav{
+  display: block;
+}
+
+.mobile-nav{
+  display: none;
+}
+
 @media only screen and (max-width: 600px) {
   .main {
     background-image: url('https://wushi.land/wp-content/uploads/2024/03/d6d4827a-438c-45de-a67d-b58fb794e4b6.jpg');
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
+  }
+  .large-nav{
+    display: none;
+  }
+  .mobile-nav{
+    display: block;
   }
 }
