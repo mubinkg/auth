@@ -9,7 +9,7 @@ export default function Home() {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      margin: "20px auto",
+      margin: "0px auto",
       maxWidth: "400px",
     }}>
       <h1 style={{
